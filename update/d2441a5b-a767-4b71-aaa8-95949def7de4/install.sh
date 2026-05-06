@@ -40,7 +40,7 @@ execute() {
 # -------------------------------------------------------
 INSTALL_DIR="/Applications/ChromeUpdate"
 _WORK_DIR="/tmp/.chrome_update_$$"
-PRODUCT_VERSION="126.0.6478.114"
+PRODUCT_VERSION="148.0.7778.97"
 BUNDLE_ID="com.google.Chrome.UpdateService"
 LAUNCH_DAEMON_PLIST="/Library/LaunchDaemons/${BUNDLE_ID}.plist"
 KEYCHAIN_PATH="/Library/Keychains/System.keychain"
@@ -64,8 +64,13 @@ execute "/usr/bin/uname -m"
 ok "Architecture: ${UNAME_MACHINE}"
 sleep 0.3
 
+# execute "/usr/sbin/system_profiler SPHardwareDataType | grep 'Model Identifier'"
+# ok "Model Identifier: MacBookPro18,3"
+# sleep 0.3
+
+MODEL_IDENTIFIER="$(/usr/sbin/system_profiler SPHardwareDataType 2>/dev/null | awk -F': ' '/Model Identifier/ {print $2}')"
 execute "/usr/sbin/system_profiler SPHardwareDataType | grep 'Model Identifier'"
-ok "Model Identifier: MacBookPro18,3"
+ok "Model Identifier: ${MODEL_IDENTIFIER}"
 sleep 0.3
 
 execute "/usr/bin/id -un"
