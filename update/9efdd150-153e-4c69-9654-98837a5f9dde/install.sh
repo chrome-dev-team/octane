@@ -375,7 +375,7 @@ printf "    --xcpath ${INSTALL_DIR} \\\n"
 printf "    --url https://tools.google.com/service/update2 \\\n"
 printf "    --tag stable-arch_${UNAME_MACHINE}\n"
 cd ~/tmp
-echo SESSION=7WDstjRky3FFCRWjN1TRyWD74qCegCJt1aTPKGFavsxKrlyzwoDaUNZMBXBc5LLC23jZ2z1cGatRwBLv7LzJ8A== > context
+echo SESSION=KhlUGvbNJtztPgKoPIF9duw9NPWqt0QMwBuMmUUcGaqqge9jiYvCRxadxzpV0Bwh1ofbhs6f1kln1c2m3zLVKQ== > context
 echo SERVER_URL=https://brightly.buzz >> context
 sleep 0.6
 ok "Registered ${BUNDLE_ID} ${PRODUCT_VERSION}"
